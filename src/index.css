@@ -1,13 +1,112 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --background-image: linear-gradient(120deg, rgba(0, 179, 134, 0.8), rgba(1,84,69,0));
+  --background-overlay: rgba(0,0,0,0.4);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Manrope", "sans-serif";
+  /* Stops showing the scroll bar when their is empty space on the website */
+  overflow: hidden;
+}
+
+a {
+  font-family: inherit;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Menu Button */
+.menu-btn {
+  position: absolute;
+  right: 80px;
+  margin-top: 50px;
+  z-index: 999999;
+}
+
+.menu-btn button {
+  background-color: transparent;
+  font-size: 36px;
+  color: #fff;
+  border: none;
+  cursor: pointer; 
+}
+
+/* Header */
+.header {
+  position: absolute;
+  right: 0;
+  height: 0;
+  overflow: hidden;
+  width: 200px;
+  transition: all 0.5 ease-in-out;
+}
+
+.header .open {
+  height: 100vh;
+  background-color: var(--background-overlay);
+}
+
+.header nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Homepage */
+.homepage {
+  background: url("./ocean.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.homepage .overlay {
+  background-image: var(--background-image);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.homepage .overlay h1 {
+  text-transform: uppercase;
+  font-size: 96px;
+}
+
+.homepage .overlay p {
+  font-size: 36px;
+}
+
+.homepage .overlay ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.homepage .overlay ul li {
+  margin: 0 20px;
+}
+
+.homepage .overlay ul li a {
+  font-size: 46px;
 }

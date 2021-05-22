@@ -52,10 +52,10 @@ a {
   height: 0;
   overflow: hidden;
   width: 200px;
-  transition: all 0.5 ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
-.header .open {
+.header.open {
   height: 100vh;
   background-color: var(--background-overlay);
 }
@@ -66,6 +66,10 @@ a {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+}
+
+.header nav ul li {
+  margin: 20px 0;
 }
 
 /* Homepage */
@@ -85,6 +89,7 @@ a {
   justify-content: center;
   min-height: 100vh;
   color: #fff;
+  text-align: center;
 }
 
 .homepage .overlay h1 {
@@ -109,4 +114,61 @@ a {
 
 .homepage .overlay ul li a {
   font-size: 46px;
+}
+
+/* Contacts */
+.contacts {
+  background-image: var(--background-image);
+  height: 100vh;
+  
+}
+
+.contacts h1 {
+  padding: 50px 80px;
+  color: #fff;
+}
+
+.contacts ul {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contacts ul li {
+  /* For later use when I add more list items */
+  margin: 10px 0;
+}
+
+.contacts ul li a {
+  font-size: 30px;
+}
+
+@media (max-width: 992px) {
+  .homepage .overlay h1 {
+    font-size: 64px;
+  }
+}
+
+@media (max-width: 500px) {
+  .menu-btn {
+    right: 30px;
+  }
+
+  .homepage .overlay h1 {
+    font-size: 30px;
+  }
+
+  .homepage .overlay p {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  .homepage .overlay ul li a {
+    font-size: 24px;
+  }
+
+  .contacts ul li a {
+    font-size: 14px;
+  }
 }

@@ -1,7 +1,17 @@
+import { FaEnvelope } from "react-icons/fa"
+
 const Contacts = () => {
  return (
   <>
-   <h1>Contacts Page</h1>
+   <section className="contacts">
+    <h1>Contacts Me</h1>
+    <ul>
+     <li><a href="mailto:RaynaldoFrancis@outlook.com">
+      <FaEnvelope /> {" "}
+      RaynaldoFrancis@outlook.com</a></li>
+    </ul>
+
+   </section>
   </>
  )
 }

@@ -1,32 +1,34 @@
 import { BiMenu } from "react-icons/bi"
 import { Link } from "react-router-dom"
 import { useState } from "react"
+import { Navbar } from "../data/Navbar"
+
 const Menu = () => {
  const [isOpen, setIsOpen] = useState(false)
+ const [links, setLinks] = useState(Navbar)
+
  return (
   <>
    <div className="menu-btn">
-    <button>
+    <button onClick={() => setIsOpen(!isOpen)}>
      <BiMenu />
     </button>
    </div>
-   {isOpen && (
-    <header className="header">
-     <nav>
-      <ul>
-       <li>
-        <Link to="/"> Homepage </Link>
-       </li>
-       <li>
-        <Link to="/projects"> Projects</Link>
-       </li>
-       <li>
-        <Link to="/cantact-me"> Cantact Me </Link>
-       </li>
-      </ul>
-     </nav>
-    </header>
-   )}
+
+   <header className={`${isOpen ? "header open" : "header"}`}>
+    <nav>
+     <ul>
+      {links.map(({ id, title, url }) => {
+
+       return (
+        <li key={id} onClick={() => setIsOpen(false)}>
+         <Link to={url}>{title}</Link>
+        </li>
+       )
+      })}
+     </ul>
+    </nav>
+   </header>
   </>
  )
 }

@@ -4,6 +4,7 @@ import Projects from "./pages/Projects";
 import Error from "./pages/Error";
 import Contacts from "./pages/Contacts";
 import Menu from "./components/Menu";
+import AboutMe from "./pages/AboutMe";
 //import logo from "./Raynaldo.jpg";
 //import './App.css';
 
@@ -20,7 +21,10 @@ const App = () => {
         <Route path="/projects">
           <Projects />
         </Route>
-        <Route path="contact-me">
+        <Route path="/about-me">
+          <AboutMe />
+        </Route>
+        <Route path="/contact-me">
           <Contacts />
         </Route>
         {/* * means the path will always match */}

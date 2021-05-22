@@ -5,6 +5,7 @@ import { Navbar } from "../data/Navbar"
 
 const Menu = () => {
  const [isOpen, setIsOpen] = useState(false)
+ // eslint-disable-next-line
  const [links, setLinks] = useState(Navbar)
 
  return (

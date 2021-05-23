@@ -172,6 +172,26 @@ a {
   font-size: 15px;
 }
 
+/* About Me */
+.aboutMe {
+  background-image: var(--background-image);
+  height: 100vh;
+}
+
+.aboutMe h1 {
+  padding: 50px 80px;
+  color: #fff;
+}
+
+.aboutMe p {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
+  width: 40em;
+  text-indent: 50px;
+  color: #fff;
+}
+
 /* Contacts */
 .contacts {
   background-image: var(--background-image);
